@@ -11,7 +11,7 @@ namespace LinkedListDS
         /// <summary>
         /// Prepare a Node
         /// </summary>
-        /// <param name="data"></param>
+        /// <param name="dataNode"></param>
         public Node(int dataNode)
         {
             data = dataNode;
