@@ -11,7 +11,7 @@ namespace LinkedListDS
         /// UC-1
         /// </summary>
         /// <param name="newData"></param>
-        public void InsertLast(int newData)
+        public Node InsertLast(int newData)
         {
             Node newNode = new Node(newData);
             if(this.head==null)
@@ -24,6 +24,7 @@ namespace LinkedListDS
                 lastNode.next = newNode;// changing the next pointer 
             }
             Console.WriteLine("Inserted Into list "+newNode.data);
+            return newNode;
         }
         public Node GetLastNode()
         {
@@ -44,6 +45,10 @@ namespace LinkedListDS
             newNode.next=this.head;
             this.head = newNode;
             Console.WriteLine("Inserted at front:"+newData);
+        }
+        public void Append(int newData)
+        {
+           InsertLast(newData);  
         }
         public Node Display()
         {

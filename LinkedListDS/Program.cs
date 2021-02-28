@@ -12,10 +12,15 @@ namespace LinkedListDS
             linkedList.InsertLast(30);
             linkedList.InsertLast(70);
             linkedList.Display();
+            Console.WriteLine("---------------------------------------");
             linkedList.InsertFront(70);
             linkedList.InsertFront(30);
             linkedList.InsertFront(56);
+            linkedList.Display();
             Console.WriteLine("---------------------------------------");
+            linkedList.Append(56);
+            linkedList.Append(30);
+            linkedList.Append(70);
             linkedList.Display();
             Console.ReadLine();
         }
