@@ -79,7 +79,16 @@ namespace LinkedListDS
             linkedListAddAfterNode.Display();
             linkedListAddAfterNode.DeleteNodeWithValue(40);
             linkedListAddAfterNode.Display();
-            Console.ReadLine();
+            //UC-10
+            Console.WriteLine("Sorted linked list");
+            SortedLinkedList sortedLinkedList = new SortedLinkedList();
+            sortedLinkedList.AddNode(56);
+            sortedLinkedList.AddNode(30);
+            sortedLinkedList.AddNode(40);
+            sortedLinkedList.AddNode(70);
+            sortedLinkedList.Display();
+        
+        Console.ReadLine();
         }
     }
 }

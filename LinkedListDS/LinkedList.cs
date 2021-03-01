@@ -172,6 +172,26 @@ namespace LinkedListDS
             prev.next = pointsToValue.next;
 
         }
+        public void SortDisplay()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Nothing to display");
+                return;
+            }
+
+            Node temp = head;
+            while (temp != null)
+            {
+                Console.Write(temp.data + " ");
+                if (temp.next != null)
+                {
+                    Console.Write("->");
+                }
+                temp = temp.next;
+            }
+            Console.WriteLine();
+        }
         public Node Display()
         {
             Console.WriteLine("Displaying nodes");
