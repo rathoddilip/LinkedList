@@ -62,8 +62,17 @@ namespace LinkedListDS
             if (searchlinkedList.Search(30))
                 Console.WriteLine("Node found");
             else
+            {
                 Console.WriteLine("Node not found");
-            
+            }
+            Console.WriteLine("Add node after node");
+            LinkedList linkedListAddAfterNode = new LinkedList();
+
+            linkedListAddAfterNode.InsertLast(56);
+            linkedListAddAfterNode.InsertLast(30);
+            linkedListAddAfterNode.InsertLast(70);
+            linkedListAddAfterNode.AddNodeAfterNode(40,30);
+            linkedListAddAfterNode.Display();
             Console.ReadLine();
         }
     }
