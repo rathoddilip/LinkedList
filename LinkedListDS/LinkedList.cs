@@ -46,10 +46,51 @@ namespace LinkedListDS
             this.head = newNode;
             Console.WriteLine("Inserted at front:"+newData);
         }
+        /// <summary>
+        /// UC3 Append
+        /// </summary>
+        /// <param name="newData"></param>
         public void Append(int newData)
         {
            InsertLast(newData);  
         }
+       public void InsertAfterNode(Node prevNode, int newData)
+        {
+            if (prevNode == null)
+            {
+                Console.WriteLine("The given previous node Cannot be null");
+                return;
+            }
+            Node newNode = new Node(newData);
+            newNode.next = prevNode.next;
+            prevNode.next = newNode;
+        }
+        /// <summary>
+        /// UC-4 Add between node
+        /// </summary>
+        /// <param name="preNode"></param>
+        /// <param name="addAfterNode"></param>
+        public void AddNodeAfterNode(int newData, int addAfterNode)
+        {
+            Node newNode = new Node(newData);
+            if (head == null)
+            {
+                head = newNode;
+            }
+            else
+            {
+                Node temp = head;
+                while (temp.data != addAfterNode)
+                {
+                    temp = temp.next;
+                }
+                newNode.next = temp.next;
+                temp.next = newNode;
+
+            }
+            Console.WriteLine("Added in between Node: "+newData);
+        }
+
         public Node Display()
         {
             Console.WriteLine("Displaying nodes");
