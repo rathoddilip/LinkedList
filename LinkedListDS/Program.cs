@@ -48,6 +48,22 @@ namespace LinkedListDS
             linkedListLast.Display();
             linkedListLast.DeleteNodeAtLast();
             linkedListLast.Display();
+            //UC7
+            Console.WriteLine("Search for Node 30"); 
+            LinkedList searchlinkedList = new LinkedList();
+            Node node56 = new Node(56);
+            Node node30 = new Node(30);
+            Node node70 = new Node(70);
+            node56.next = node30;
+            node30.next = node70;
+            searchlinkedList.head = node56;
+            searchlinkedList.Display();
+            searchlinkedList.Display();
+            if (searchlinkedList.Search(30))
+                Console.WriteLine("Node found");
+            else
+                Console.WriteLine("Node not found");
+            
             Console.ReadLine();
         }
     }

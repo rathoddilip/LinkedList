@@ -123,6 +123,24 @@ namespace LinkedListDS
             }
             temp.next = null;
         }
+        /// <summary>
+        /// Search perticular  30 node
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public bool Search(int value)
+        {
+            Node temp = this.head;
+            while (temp != null)
+            {
+                if (temp.data == value)
+                {
+                    return true;
+                }
+                temp = temp.next;
+            }
+            return true;
+        }
         public Node Display()
         {
             Console.WriteLine("Displaying nodes");
