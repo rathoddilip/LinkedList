@@ -37,6 +37,12 @@ namespace LinkedListDS
             linkedListForBetween.InsertLast(70);
             linkedListForBetween.AddNodeAfterNode(30, 56);
             linkedListForBetween.Display();
+            //UC5
+            Console.WriteLine("---------------------------------------");
+            Console.WriteLine("Delete First element demo");
+            linkedListForBetween.Display();
+            linkedListForBetween.DeleteNodeAtFirst();
+            linkedListForBetween.Display();
 
             Console.ReadLine();
         }
