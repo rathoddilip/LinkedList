@@ -106,6 +106,23 @@ namespace LinkedListDS
 
             Console.WriteLine("Removed from linkedlist :" + temp.data);
         }
+        /// <summary>
+        /// Delete node at last
+        /// </summary>
+        public void DeleteNodeAtLast()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("Nothing To Delete");
+                return;
+            }
+            Node temp = head;
+            while (temp.next.next != null)
+            {
+                temp = temp.next;
+            }
+            temp.next = null;
+        }
         public Node Display()
         {
             Console.WriteLine("Displaying nodes");
