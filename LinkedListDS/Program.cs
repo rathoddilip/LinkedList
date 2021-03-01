@@ -65,13 +65,19 @@ namespace LinkedListDS
             {
                 Console.WriteLine("Node not found");
             }
+            //UC-8
             Console.WriteLine("Add node after node");
             LinkedList linkedListAddAfterNode = new LinkedList();
-
             linkedListAddAfterNode.InsertLast(56);
             linkedListAddAfterNode.InsertLast(30);
             linkedListAddAfterNode.InsertLast(70);
             linkedListAddAfterNode.AddNodeAfterNode(40,30);
+            linkedListAddAfterNode.Display();
+
+            //UC-9
+            Console.WriteLine("Delete node 40");
+            linkedListAddAfterNode.Display();
+            linkedListAddAfterNode.DeleteNodeWithValue(40);
             linkedListAddAfterNode.Display();
             Console.ReadLine();
         }
